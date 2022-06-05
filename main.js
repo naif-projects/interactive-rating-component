@@ -55,5 +55,6 @@ els('.js-btn-group button').forEach((btn) => {
 
 // submit btn
 el('#submit-btn').addEventListener('click', (event) => {
-  renderThankMessage(state);
+  if (state === null) alert('You should select a rate state');
+  else renderThankMessage(state);
 });
