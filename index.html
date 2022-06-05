@@ -14,10 +14,115 @@
     />
 
     <!-- page title -->
-    <title> </title>
+    <title>Interactive rating component</title>
   </head>
 
-  <body>
+  <body class="p-4 bg-primary-darker text-white font-qutfit">
+    <main class="min-h-screen flex items-center justify-center flex-col gap-4">
+      <!-- Rating state start -->
+      <div id="rating-card" class="max-w-xs p-6 rounded-xl bg-primary-dark">
+        <!-- icon -->
+        <div
+          class="w-10 h-10 bg-primary-base rounded-full flex items-center justify-center"
+        >
+          <img src="assets/icon-star.svg" alt="icon star" />
+        </div>
+
+        <!-- card title -->
+        <h2 class="my-5 font-bold text-2xl">How did we do?</h2>
+
+        <!-- description -->
+        <p class="text-primary-light">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+
+        <!-- rating button list -->
+        <div class="flex justify-between mt-6 text-primary-light js-btn-group">
+          <button
+            data-btn-value="1"
+            class="w-10 h-10 rounded-full bg-primary-base hover:bg-primary-light hover:text-white"
+          >
+            1
+          </button>
+
+          <button
+            data-btn-value="2"
+            class="w-10 h-10 rounded-full bg-primary-base hover:bg-primary-light hover:text-white"
+          >
+            2
+          </button>
+
+          <button
+            data-btn-value="3"
+            class="w-10 h-10 rounded-full bg-primary-base hover:bg-primary-light hover:text-white"
+          >
+            3
+          </button>
+
+          <button
+            data-btn-value="4"
+            class="w-10 h-10 rounded-full bg-primary-base hover:bg-primary-light hover:text-white"
+          >
+            4
+          </button>
+
+          <button
+            data-btn-value="5"
+            class="w-10 h-10 rounded-full bg-primary-base hover:bg-primary-light hover:text-white"
+          >
+            5
+          </button>
+        </div>
+
+        <!-- submit btn -->
+        <div class="mt-8 uppercase text-sm">
+          <button
+            id="submit-btn"
+            class="w-full bg-secondary-base rounded-full py-3 px-4 hover:bg-secondary-base/90"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+      <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+      <div
+        id="rating-thank-card"
+        class="hidden max-w-xs p-6 rounded-xl bg-primary-dark"
+      >
+        <!-- image -->
+        <div class="flex justify-center mx-auto w-1/2">
+          <img
+            src="assets/illustration-thank-you.svg"
+            alt="illustration image"
+          />
+        </div>
+
+        <!-- rating label -->
+        <div class="flex justify-center text-sm mt-6">
+          <div
+            class="py-1 px-4 bg-primary-base text-secondary-base rounded-full inline-block"
+          >
+            You selected
+            <span id="rating-label"></span>
+            out of 5
+          </div>
+        </div>
+
+        <!-- title -->
+        <h2 class="text-xl text-center mt-5 mb-3">Thank you!</h2>
+
+        <!-- description -->
+        <p class="text-primary-light mb-4 text-sm text-center">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don't hesitate to get in touch!
+        </p>
+      </div>
+      <!-- Thank you state end -->
+    </main>
+
     <!-- footer -->
     <footer class="py-6 text-center">
       Challenge by
